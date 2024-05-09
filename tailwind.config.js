@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         'regal-red': '#E13E57',
+        'regal-green' : '#44B678'
       },
     },
   },

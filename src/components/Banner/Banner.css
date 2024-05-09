@@ -1,7 +1,8 @@
 
 .banner-section {
     height: 100vh;
-    background-image: url('https://wp.xpeedstudio.com/charitious/wp-content/uploads/2018/06/slider_4.jpg');
+    background-image: url('https://wp.xpeedstudio.com/charitious/wp-content/themes/charitious/assets/images/backgrounds/blog-bg.jpg');
+    /* background-image: url('https://wp.xpeedstudio.com/charitious/wp-content/uploads/2018/06/slider_4.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

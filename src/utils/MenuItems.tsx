@@ -1,18 +1,24 @@
-export const MenuItems = ({classes}) => {
+export const MenuItems = ({ classes }) => {
   return (
     <ul className={classes}>
       <li>
-        <a>Item 1</a>
+        <a>All Supplies</a>
       </li>
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>
+            <div className="w-5 h-5 rounded-full flex gap-2">
+              <img
+                alt="Tailwind CSS Navbar component"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                className="rounded-full"
+              />
+              <p className="md:hidden">Profile</p>
+            </div>
+          </summary>
           <ul className="p-2">
             <li>
-              <a>Submenu 1</a>
-            </li>
-            <li>
-              <a>Submenu 2</a>
+              <a>Login</a>
             </li>
           </ul>
         </details>

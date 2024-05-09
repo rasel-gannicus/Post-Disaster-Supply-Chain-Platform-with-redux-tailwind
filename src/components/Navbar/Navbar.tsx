@@ -25,52 +25,6 @@ const Navbar = () => {
     </ul>
   );
   return (
-    // <div className="navbar lg:w-3/4 mx-auto shadow-lg rounded lg:mt-3">
-    //   {/* --- Navbar Logo --- */}
-    //   <div className="flex-1 items-center">
-    //     <div className="border-[3px] w-10 h-10 border-slate-400 rounded-full p-1 mr-2 overflow-hidden">
-    //       <img src="logo.png" className="" alt="" />
-    //     </div>
-
-    //     <p className="font-semibold text-2xl">Community Health</p>
-    //   </div>
-    //   <div className="flex-none gap-2">
-    //     <div className="">
-    //       <p>All Supplies</p>
-    //     </div>
-    //     <div className="dropdown dropdown-end">
-    //       <div
-    //         tabIndex={0}
-    //         role="button"
-    //         className="btn btn-ghost btn-circle avatar"
-    //       >
-    //         <div className="w-10 rounded-full">
-    //           <img
-    //             alt="Tailwind CSS Navbar component"
-    //             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-    //           />
-    //         </div>
-    //       </div>
-    //       <ul
-    //         tabIndex={0}
-    //         className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-    //       >
-    //         <li>
-    //           <a className="justify-between">
-    //             Profile
-    //             <span className="badge">New</span>
-    //           </a>
-    //         </li>
-    //         <li>
-    //           <a>Settings</a>
-    //         </li>
-    //         <li>
-    //           <a>Logout</a>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="navbar bg-base-100 lg:w-3/4 mx-auto shadow-lg rounded lg:mt-3">
       <div className="navbar-start">
         <div className="dropdown">
@@ -127,7 +81,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden lg:flex lg:flex-1 lg:justify-end ">
         <MenuItems classes={'menu menu-horizontal px-1'} />
       </div>
       {/* <div className="navbar-end">

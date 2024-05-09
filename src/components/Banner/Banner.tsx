@@ -2,9 +2,12 @@ import './Banner.css' ;
 
 const Banner = () => {
     return (
-        <div className="banner-section  z-10">
-            <div className='banner-shadow bg-slate-600'></div>
-            <h2>Banner Here</h2>
+        <div className="banner-section flex justify-center items-center">
+            <div className='banner-shadow bg-slate-700 z-10'></div>
+            <div className=" z-50 relative flex gap-4 flex-col justify-center items-center">
+                <h2 className='text-white text-4xl font-bold text-center'>Community Health and <br /> Medical Supply Chain Platform</h2>
+                <button className="btn bg-[#44B678] border-none text-white" >View All Supplies</button>
+            </div>
         </div>
     );
 };

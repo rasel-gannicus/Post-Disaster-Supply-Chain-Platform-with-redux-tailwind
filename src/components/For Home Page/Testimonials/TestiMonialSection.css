@@ -1,4 +1,9 @@
 
-.slider-container .slick-slide {
-    /* margin-left: 50px !important; Adjust the values as needed */
-  }
+.testimonial-slider{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.825);
+    background-image: url(world-map.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

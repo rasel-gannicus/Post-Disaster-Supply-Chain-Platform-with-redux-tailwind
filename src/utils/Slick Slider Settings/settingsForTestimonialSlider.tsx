@@ -2,11 +2,11 @@
 
 export const settingsForTestimonialSliders = {
     dots: true,
-    // infinite: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    // centerMode : true,
+    centerMode : true,
     arrows : true,
     responsive: [
       {

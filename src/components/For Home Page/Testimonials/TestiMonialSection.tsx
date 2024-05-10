@@ -10,7 +10,7 @@ const TestiMonialSection = () => {
         Testimonials
       </h2>
       <hr className="border-1 w-3/4 mx-auto my-5" />
-      <div className="testimonial-slider py-5">
+      <div className="testimonial-slider ">
         <Slider {...settingsForTestimonialSliders}>
           <TestimonialCard />
           <TestimonialCard />

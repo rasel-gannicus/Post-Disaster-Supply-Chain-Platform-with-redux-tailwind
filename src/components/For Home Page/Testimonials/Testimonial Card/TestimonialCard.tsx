@@ -1,6 +1,6 @@
 const TestimonialCard = () => {
   return (
-    <div className="mx-5 card bg-base-100 shadow-xl border py-5 my-5">
+    <div className="mx-5 card glass bg-base-100  py-5 my-5">
       <figure className="w-40 h-40 mx-auto rounded-full overflow-hidden border-2">
         <img
           src="https://i.ibb.co/JsTcbXF/hacker.png"

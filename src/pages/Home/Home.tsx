@@ -1,5 +1,6 @@
-import Banner from "../../components/Banner/Banner";
-import SupplySection from "../../components/SupplySection/SupplySection";
+import Banner from "../../components/For Home Page/Banner/Banner";
+import SupplySection from "../../components/For Home Page/SupplySection/SupplySection";
+
 
 const Home = () => {
   return (

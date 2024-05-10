@@ -1,7 +1,6 @@
-import { MenuItems } from "../../utils/MenuItems";
+import { MenuItems } from "../../../utils/MenuItems";
 
 const Navbar = () => {
-
   return (
     <div className="navbar z-40 bg-base-100 lg:w-3/4 mx-auto shadow-lg rounded lg:mt-3 absolute top-0 left-0 right-0 ">
       <div className="navbar-start">
@@ -22,7 +21,11 @@ const Navbar = () => {
               />
             </svg>
           </div>
-          <MenuItems classes={'menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'} />
+          <MenuItems
+            classes={
+              "menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            }
+          />
         </div>
 
         <div className="flex gap-1 navbar-center justify-center items-center">
@@ -38,7 +41,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-center hidden lg:flex lg:flex-1 lg:justify-end ">
-        <MenuItems classes={'menu menu-horizontal px-1'} />
+        <MenuItems classes={"menu menu-horizontal px-1"} />
       </div>
       {/* <div className="navbar-end">
         <a className="btn">Button</a>

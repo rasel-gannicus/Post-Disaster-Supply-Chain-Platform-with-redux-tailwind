@@ -5,5 +5,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&family=Poetsen+One&display=swap");
 
 * {
-    font-family: "Baloo Da 2", sans-serif;
+  font-family: "Baloo Da 2", sans-serif;
 }
+
+.slick-slide {
+    /* max-width: 350px;
+    margin-right: 20px; */
+  }
+
+

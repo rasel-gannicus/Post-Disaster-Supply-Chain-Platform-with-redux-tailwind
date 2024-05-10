@@ -1,0 +1,10 @@
+
+
+.footer-section{
+    position: relative;
+    background-color: #2b3539;
+    background-image: url('world-map.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

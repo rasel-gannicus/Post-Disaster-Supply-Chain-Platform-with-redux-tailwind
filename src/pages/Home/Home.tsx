@@ -1,3 +1,4 @@
+import About from "../../components/For Home Page/About Us/About";
 import Banner from "../../components/For Home Page/Banner/Banner";
 import GallerySection from "../../components/For Home Page/Gallery Section/GallerySection";
 import SupplySection from "../../components/For Home Page/SupplySection/SupplySection";
@@ -10,7 +11,7 @@ const Home = () => {
       <Banner />
 
       {/* --- Supply Cards section --- */}
-      <div className="max-w-[1200px] mx-auto flex flex-col py-3 ">
+      <div className="lg:max-w-[1200px] max-w-full  md:mx-auto mx-5 px-3  flex flex-col py-3">
         <SupplySection />
         <button className="btn text-white bg-regal-red mx-auto">
           View All Supplies
@@ -21,6 +22,9 @@ const Home = () => {
 
         {/* --- Gallery section --- */}
         <GallerySection /> 
+
+        {/* --- About section --- */}
+        <About />
       </div>
     </div>
   );

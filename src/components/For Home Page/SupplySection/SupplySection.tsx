@@ -1,4 +1,4 @@
-import SupplyCard from "../SupplyCard/SupplyCard";
+import SupplyCard from "./SupplyCard/SupplyCard";
 
 
 const SupplySection = () => {

@@ -15,6 +15,14 @@ export const supplyApi = createApi({
 
         getSingleSupply : builder.query({
             query : (id) => `/supplies/${id}`
+        }),
+
+        addNewSupply : builder.mutation({
+            query : (data) => ({
+                url : '/dashboard/create-supply',
+                method : 'POST', 
+                body : data ,
+            })
         })
     })
 })

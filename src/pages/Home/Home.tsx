@@ -4,7 +4,6 @@ import Banner from "../../components/For Home Page/Banner/Banner";
 import GallerySection from "../../components/For Home Page/Gallery Section/GallerySection";
 import SupplySection from "../../components/For Home Page/SupplySection/SupplySection";
 import TestiMonialSection from "../../components/For Home Page/Testimonials/TestiMonialSection";
-import { goToAllSuppliesPage } from "../../utils/goToAllSuppliesPage";
 
 const Home = () => {
   const navigate = useNavigate() ; 

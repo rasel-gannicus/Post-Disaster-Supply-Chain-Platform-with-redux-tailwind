@@ -3,6 +3,7 @@ import Home from "../pages/Home/Home";
 import App from "../App";
 import AllSupllies from "../pages/All Supplies/AllSupllies";
 import SingleSupplyDetails from "../pages/Single Supply Details/SingleSupplyDetails";
+import Login from "../pages/Login/Login";
 
 
 
@@ -26,7 +27,11 @@ export const router = createBrowserRouter([
             {
                 path : 'supplies/:id',
                 element : <SingleSupplyDetails />
-            }
+            },
+            {
+                path : 'login',
+                element : <Login />
+            },
         ]
     }
 ])

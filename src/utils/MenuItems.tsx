@@ -22,7 +22,7 @@ export const MenuItems = ({ classes }) => {
           </summary>
           <ul className="p-2">
             <li>
-              <a>Login</a>
+              <NavLink to='/login'>Login</NavLink>
             </li>
           </ul>
         </details>

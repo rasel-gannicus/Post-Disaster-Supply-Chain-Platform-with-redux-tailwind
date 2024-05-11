@@ -7,6 +7,7 @@ export const supplyApi = createApi({
     baseQuery : fetchBaseQuery({
         baseUrl : 'http://localhost:5001'
     }),
+    tagTypes : ['supplyApi', 'supplies'] ,
     endpoints : (builder) => ({
 
         getAllSupplies : builder.query({
@@ -22,10 +23,11 @@ export const supplyApi = createApi({
                 url : '/dashboard/create-supply',
                 method : 'POST', 
                 body : data ,
-            })
+            }),
+            invalidatesTags : ['supplies', 'supplyApi']
         })
     })
 })
 
 
-export const {useGetAllSuppliesQuery, useGetSingleSupplyQuery} = supplyApi
+export const {useGetAllSuppliesQuery, useGetSingleSupplyQuery, useAddNewSupplyMutation} = supplyApi

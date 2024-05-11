@@ -25,6 +25,7 @@ const DashBoard = () => {
           Close
         </label>
       </div>
+      
     </div>
   );
 };

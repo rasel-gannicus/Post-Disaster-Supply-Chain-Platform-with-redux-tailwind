@@ -1,14 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    allSupplies : [] 
+    allSupplies : [] ,
+    deleteSupplyId : ''
 }
 
 
 export const supplySlice = createSlice({
     name : 'supplies',
     initialState, 
-    reducers : {}
+    reducers : {
+        
+    }
 })
 
 

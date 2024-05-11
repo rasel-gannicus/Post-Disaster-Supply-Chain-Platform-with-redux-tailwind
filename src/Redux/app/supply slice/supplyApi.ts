@@ -25,9 +25,17 @@ export const supplyApi = createApi({
                 body : data ,
             }),
             invalidatesTags : ['supplies', 'supplyApi']
-        })
+        }),
+
+        deleteSupply : builder.mutation({
+            query : (id) => ({
+                url : `/dashboard/delete-supply/${id}`,
+                method : 'DELETE'
+            }),
+            invalidatesTags : ['supplies', 'supplyApi']
+        }) 
     })
 })
 
 
-export const {useGetAllSuppliesQuery, useGetSingleSupplyQuery, useAddNewSupplyMutation} = supplyApi
+export const {useGetAllSuppliesQuery, useGetSingleSupplyQuery, useAddNewSupplyMutation, useDeleteSupplyMutation} = supplyApi

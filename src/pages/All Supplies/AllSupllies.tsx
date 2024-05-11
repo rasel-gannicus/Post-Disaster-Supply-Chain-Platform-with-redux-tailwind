@@ -3,7 +3,8 @@ import SupplyCard from "../../components/For Home Page/SupplySection/SupplyCard/
 import { useGetAllSuppliesQuery } from "../../Redux/app/supply slice/supplyApi";
 
 const AllSupllies = () => {
-    const[supplies, setSupplies] = useState([])
+
+    // --- Fetching data from server using Redux toolkit Query
     
     const {data, isLoading, isError, error} = useGetAllSuppliesQuery() ;
     
@@ -15,7 +16,7 @@ const AllSupllies = () => {
         content = <p>{error?.error}</p>
     }
     if (!isLoading && !isError && data.length === 0) {
-        content = <p>No Tasks Found</p>
+        content = <p>No Supply Found</p>
     }
     if (!isLoading && !isError && data.length > 0) {
         console.log(data);

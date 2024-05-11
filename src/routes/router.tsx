@@ -8,6 +8,7 @@ import Register from "../pages/Register/Register";
 import DashBoard from "../pages/Dashboard/DashBoard";
 import AllSuppliesDashboard from "../pages/Dashboard/Dashboard All Supplies/AllSuppliesDashboard";
 import CreateSupply from "../pages/Dashboard/Create New Supply/CreateSupply";
+import DashBoardHome from "../pages/Dashboard/DashBoardHome";
 
 export const router = createBrowserRouter([
   {
@@ -44,7 +45,10 @@ export const router = createBrowserRouter([
     path : '/dashboard',
     element : <DashBoard />,
     children : [
-        
+        {
+          index : true ,
+          element : <DashBoardHome />
+        },
         {
             path: "supplies",
             element: <AllSuppliesDashboard />,

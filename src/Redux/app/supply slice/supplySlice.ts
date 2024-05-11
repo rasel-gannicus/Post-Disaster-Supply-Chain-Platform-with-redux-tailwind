@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    allSupplies : [] ,
     deleteSupplyId : ''
 }
 
@@ -10,10 +9,12 @@ export const supplySlice = createSlice({
     name : 'supplies',
     initialState, 
     reducers : {
-        
+        getDeletedId : (state, action) =>{
+            state.deleteSupplyId = action.payload ;
+        }
     }
 })
 
 
-export const {} = supplySlice.actions ; 
+export const {getDeletedId} = supplySlice.actions ; 
 export default supplySlice.reducer ;

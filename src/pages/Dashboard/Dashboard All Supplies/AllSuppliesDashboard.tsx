@@ -1,8 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { useGetAllSuppliesQuery } from "../../../Redux/app/supply slice/supplyApi";
+import { useAppDispatch, useAppSelector } from "../../../Redux/hooks";
+import { getDeletedId } from "../../../Redux/app/supply slice/supplySlice";
 
 const AllSuppliesDashboard = () => {
     const navigate = useNavigate();
+
+
+    // --- deleting functions
+    const dispatch = useAppDispatch() ;
+    const handleDelete = (id : string) => {
+      dispatch(getDeletedId(id));
+    }
+
+
   // --- Fetching data from server using Redux toolkit Query
   const { data, isLoading, isError, error } = useGetAllSuppliesQuery();
 
@@ -29,7 +40,7 @@ const AllSuppliesDashboard = () => {
         <td className="px-6 py-4">{item.amount}</td>
         <td className="px-6 py-4 flex flex-col gap-1 md:flex md:flex-row">
           <button className="btn btn-xs btn-warning font-normal">Edit</button>
-          <label  htmlFor="my_modal_7"  className="btn btn-xs btn-neutral text-white font-normal ms-1">
+          <label onClick={()=>handleDelete(item._id)}  htmlFor="my_modal_7"  className="btn btn-xs btn-neutral text-white font-normal ms-1">
             Delete
           </label>
           

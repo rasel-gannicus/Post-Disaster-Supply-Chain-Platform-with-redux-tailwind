@@ -7,12 +7,14 @@ export const supplyApi = createApi({
     baseQuery : fetchBaseQuery({
         baseUrl : 'http://localhost:5001'
     }),
-    tagTypes : ['supplyApi', 'supplies'] ,
+    tagTypes : [ 'supplies'] ,
     endpoints : (builder) => ({
 
         getAllSupplies : builder.query({
-            query : () => '/supplies'
-        }),
+            query : () => '/supplies',
+            providesTags : ['supplies']
+        }
+        ),
 
         getSingleSupply : builder.query({
             query : (id) => `/supplies/${id}`
@@ -24,7 +26,7 @@ export const supplyApi = createApi({
                 method : 'POST', 
                 body : data ,
             }),
-            invalidatesTags : ['supplies', 'supplyApi']
+            invalidatesTags : ['supplies']
         }),
 
         deleteSupply : builder.mutation({
@@ -32,7 +34,7 @@ export const supplyApi = createApi({
                 url : `/dashboard/delete-supply/${id}`,
                 method : 'DELETE'
             }),
-            invalidatesTags : ['supplies', 'supplyApi']
+            invalidatesTags : ['supplies']
         }) 
     })
 })

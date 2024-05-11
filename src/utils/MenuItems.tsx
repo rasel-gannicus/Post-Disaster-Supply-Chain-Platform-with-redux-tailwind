@@ -21,6 +21,9 @@ export const MenuItems = ({ classes }) => {
             </div>
           </summary>
           <ul className="p-2">
+            <li className="border-b-2">
+              <NavLink to='/dashboard'>Dashboard</NavLink>
+            </li>
             <li>
               <NavLink to='/login'>Login</NavLink>
             </li>

@@ -9,10 +9,7 @@ const DashBoard = () => {
 
         {/* -------------------- Dashboard Body Here ---------------------------- */}
         <div className="p-4 sm:ml-64">
-  
-            <h2>hello world</h2>
-            <Outlet />
-          
+            <Outlet />          
         </div>
       </div>
     );

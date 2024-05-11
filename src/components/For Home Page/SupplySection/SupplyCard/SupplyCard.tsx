@@ -1,5 +1,12 @@
+import { useNavigate } from "react-router-dom";
 
 const SupplyCard = () => {
+
+  // --- function for navigating user to supply details page when user click 'See Details'
+  const navigate = useNavigate() ; 
+  function goSupplyDetailsPage(){
+      navigate(`/supplies/5`) ;
+  }
   return (
     <div className="card  w-full bg-base-100 shadow-xl">
       <figure>
@@ -19,7 +26,7 @@ const SupplyCard = () => {
             <p>25 pcs</p>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn mt-7">View Details</button>
+          <button onClick={goSupplyDetailsPage} className="btn mt-7">View Details</button>
         </div>
       </div>
     </div>

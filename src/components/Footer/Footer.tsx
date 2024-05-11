@@ -17,25 +17,33 @@ const Footer = () => {
           <span>
             <img className="w-10" src="placeholder.png" alt="" />
           </span>
-          <p className="text-2xl font-semibold">Uttara, Dhaka</p>
+          <p className="text-2xl ">Uttara, Dhaka</p>
         </div>
         <div className=" flex justify-center items-center gap-3 my-5">
           <span>
             <img className="w-10" src="old-phone.png" alt="" />
           </span>
-          <p className="text-2xl font-semibold">+8801716707031</p>
+          <p className="text-2xl">+8801716707031</p>
         </div>
         <div className=" flex justify-center items-center gap-3 my-5">
           <span>
             <img className="w-10" src="mail.png" alt="" />
           </span>
-          <p className="text-2xl font-semibold">shafikrasel5@gmail.com</p>
+          <p className="text-2xl">shafikrasel5@gmail.com</p>
         </div>
         <div className="flex justify-center items-center gap-4">
-            <img className="w-8" src="https://i.ibb.co/tB9HhgW/facebook.png" alt="" />
-            {/* <img className="w-8" src="https://i.ibb.co/0sh2Gtn/google-1.png" alt="" /> */}
-            <img className="w-8" src="https://i.ibb.co/MGhDQ6K/social.png" alt="" />
-            <img className="w-8" src="twitter.png" alt="" />
+          <img
+            className="w-8"
+            src="https://i.ibb.co/tB9HhgW/facebook.png"
+            alt=""
+          />
+          {/* <img className="w-8" src="https://i.ibb.co/0sh2Gtn/google-1.png" alt="" /> */}
+          <img
+            className="w-8"
+            src="https://i.ibb.co/MGhDQ6K/social.png"
+            alt=""
+          />
+          <img className="w-8" src="twitter.png" alt="" />
         </div>
       </div>
     </div>

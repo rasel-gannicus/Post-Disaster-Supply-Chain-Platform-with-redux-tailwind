@@ -29,9 +29,10 @@ const AllSuppliesDashboard = () => {
         <td className="px-6 py-4">{item.amount}</td>
         <td className="px-6 py-4 flex flex-col gap-1 md:flex md:flex-row">
           <button className="btn btn-xs btn-warning font-normal">Edit</button>
-          <button className="btn btn-xs btn-neutral text-white font-normal ms-1">
+          <label  htmlFor="my_modal_7"  className="btn btn-xs btn-neutral text-white font-normal ms-1">
             Delete
-          </button>
+          </label>
+          
         </td>
       </tr>
     ));

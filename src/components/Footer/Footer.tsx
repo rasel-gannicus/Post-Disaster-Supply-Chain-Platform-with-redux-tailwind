@@ -17,19 +17,19 @@ const Footer = () => {
           <span>
             <img className="w-10" src="placeholder.png" alt="" />
           </span>
-          <p className="text-2xl ">Uttara, Dhaka</p>
+          <p className="text-1xl ">Uttara, Dhaka</p>
         </div>
         <div className=" flex justify-center items-center gap-3 my-5">
           <span>
             <img className="w-10" src="old-phone.png" alt="" />
           </span>
-          <p className="text-2xl">+8801716707031</p>
+          <p className="text-1xl">+8801716707031</p>
         </div>
         <div className=" flex justify-center items-center gap-3 my-5">
           <span>
             <img className="w-10" src="mail.png" alt="" />
           </span>
-          <p className="text-2xl">shafikrasel5@gmail.com</p>
+          <p className="text-1xl">shafikrasel5@gmail.com</p>
         </div>
         <div className="flex justify-center items-center gap-4">
           <img

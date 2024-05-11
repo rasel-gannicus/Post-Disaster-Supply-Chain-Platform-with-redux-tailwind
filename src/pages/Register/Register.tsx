@@ -108,7 +108,7 @@ const Register = () => {
                 Register
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-               Already have an account ?{" "}
+                Already have an account ?{" "}
                 <NavLink
                   to="/login"
                   className="font-bold text-blue-400 hover:underline dark:text-primary-500"

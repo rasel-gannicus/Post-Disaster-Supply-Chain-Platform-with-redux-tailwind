@@ -2,7 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer-section text-white">
+    <div className="footer-section text-white ">
       <div className="lg:max-w-[1200px] max-w-full  md:mx-auto mx-5 px-3 py-20 ">
         <div className="">
           <div className="flex gap-1 justify-center items-center bg-white text-black max-w-72 py-4 mx-auto rounded-lg mb-10">

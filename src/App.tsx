@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/For Home Page/Navbar/Navbar";
-import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <>
       <Navbar />
-      {/* <Home /> */}
-      <Outlet />
+      <div className="min-h-svh">
+        <Outlet />
+      </div>
       <Footer />
     </>
   );

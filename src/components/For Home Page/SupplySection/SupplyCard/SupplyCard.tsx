@@ -15,8 +15,8 @@ const SupplyCard = (data : supplyData) => {
 
   // --- function for navigating user to supply details page when user click 'See Details'
   const navigate = useNavigate() ; 
-  function goSupplyDetailsPage(){
-      navigate(`/supplies/5`) ;
+  function goSupplyDetailsPage(id : string){
+      navigate(`/supplies/${id}`) ;
   }
   return (
     <div className="card  w-full bg-base-100 shadow-xl">
@@ -37,7 +37,7 @@ const SupplyCard = (data : supplyData) => {
             <p><span className="text-teal-600 font-semibold">{amount}</span> pcs</p>
         </div>
         <div className="card-actions justify-end">
-          <button onClick={goSupplyDetailsPage} className="btn mt-7">View Details</button>
+          <button onClick={() => goSupplyDetailsPage(data?.data._id)} className="btn mt-7">View Details</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,38 @@
+.supply-details-table tbody tr td {
+  margin-top: 20px;
+}
+.supply-details-table tbody tr td:first-child {
+  text-align: right;
+  /* background-color: red; */
+  min-width: 200px;
+}
+.supply-details-table tbody tr td:last-child {
+  padding-left: 30px;
+}
+
+/*--------------------------------------------------------------------------
+For mobile:  
+---------------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+  .supply-details-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .supply-details-table tbody tr td:last-child {
+    padding-left: 0px;
+    text-align: start;
+  }
+  .supply-details-table tbody tr td:first-child {
+    text-align: left;
+    /* border-bottom: 1px solid gray; */
+    color: gray;
+  }
+}
+
+/*--------------------------------------------------- 
+For ipads, tablet:  
+---------------------------------------------------*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+}

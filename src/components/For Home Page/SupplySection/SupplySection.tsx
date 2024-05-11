@@ -2,8 +2,8 @@ import { useGetAllSuppliesQuery } from "../../../Redux/app/supply slice/supplyAp
 import SupplyCard from "./SupplyCard/SupplyCard";
 
 const SupplySection = () => {
-      // --- Fetching data from server using Redux toolkit Query
-    
+  
+      // --- Fetching data from server using Redux toolkit Query    
       const {data, isLoading, isError, error} = useGetAllSuppliesQuery() ;
     
       let content = null;

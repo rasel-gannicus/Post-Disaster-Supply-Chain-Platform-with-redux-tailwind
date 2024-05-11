@@ -8,11 +8,16 @@ export const supplyApi = createApi({
         baseUrl : 'http://localhost:5001'
     }),
     endpoints : (builder) => ({
+
         getAllSupplies : builder.query({
             query : () => '/supplies'
+        }),
+
+        getSingleSupply : builder.query({
+            query : (id) => `/supplies/${id}`
         })
     })
 })
 
 
-export const {useGetAllSuppliesQuery} = supplyApi
+export const {useGetAllSuppliesQuery, useGetSingleSupplyQuery} = supplyApi

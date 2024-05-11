@@ -5,38 +5,41 @@ import AllSupllies from "../pages/All Supplies/AllSupllies";
 import SingleSupplyDetails from "../pages/Single Supply Details/SingleSupplyDetails";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-
-
+import DashBoard from "../pages/Dashboard/DashBoard";
 
 export const router = createBrowserRouter([
-    {
-        path : '/' , 
-        element : <App />,
-        children : [
-            {
-                path : '/',
-                element : <Home />
-            },
-            {
-                path : 'home',
-                element : <Home />
-            },
-            {
-                path : 'supplies',
-                element : <AllSupllies />
-            },
-            {
-                path : 'supplies/:id',
-                element : <SingleSupplyDetails />
-            },
-            {
-                path : 'login',
-                element : <Login />
-            },
-            {
-                path : 'register',
-                element : <Register />
-            },
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "home",
+        element: <Home />,
+      },
+      {
+        path: "supplies",
+        element: <AllSupllies />,
+      },
+      {
+        path: "supplies/:id",
+        element: <SingleSupplyDetails />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+    ],
+  },
+  {
+    path : '/dashboard',
+    element : <DashBoard />
+  },
+]);

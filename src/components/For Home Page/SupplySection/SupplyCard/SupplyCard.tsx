@@ -1,6 +1,17 @@
 import { useNavigate } from "react-router-dom";
 
-const SupplyCard = () => {
+type supplyData = {
+  _id : string;
+  title : string;
+  category : string ; 
+  amount : number ; 
+  img : string ;
+  description : string ;
+}
+
+const SupplyCard = (data : supplyData) => {
+
+    const { title, category, amount, img, description} = data?.data
 
   // --- function for navigating user to supply details page when user click 'See Details'
   const navigate = useNavigate() ; 
@@ -11,15 +22,15 @@ const SupplyCard = () => {
     <div className="card  w-full bg-base-100 shadow-xl">
       <figure>
         <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+          src={img}
           alt="Shoes"
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
+        <h2 className="card-title">{data.data.title || 'Title'}</h2>
         <div className=" flex justify-start gap-2">
             <p>Category : </p>
-            <p>Medical Equipment</p>
+            <p>{category}</p>
         </div>
         <div className=" flex justify-start gap-2">
             <p>Amount : </p>

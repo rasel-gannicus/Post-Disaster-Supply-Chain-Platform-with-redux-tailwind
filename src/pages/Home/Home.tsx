@@ -14,7 +14,7 @@ const Home = () => {
 
       {/* --- Supply Cards section --- */}
       <div className="lg:max-w-[1200px] max-w-full  md:mx-auto mx-5 px-3  flex flex-col py-3">
-        <SupplySection />
+        {/* <SupplySection /> */}
         <button onClick={() => navigate('/supplies')} className="btn text-white bg-regal-red mx-auto">
           View All Supplies
         </button>

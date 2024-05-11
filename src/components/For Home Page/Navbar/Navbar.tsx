@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { MenuItems } from "../../../utils/MenuItems";
 
 const Navbar = () => {
@@ -30,22 +31,21 @@ const Navbar = () => {
 
         <div className="flex gap-1 navbar-center justify-center items-center">
           {/* --- Navbar Logo --- */}
-          <div className=" order-2 md:order-1 border-[3px] w-10 h-10 border-slate-400 rounded-full p-1 mr-2 overflow-hidden">
-            <img src="logo.png" className="" alt="" />
-          </div>
+          <NavLink to="/" className='flex gap-1 justify-center items-center'>
+            <div className=" order-2 md:order-1 border-[3px] w-10 h-10 border-slate-400 rounded-full p-1 mr-2 overflow-hidden">
+              <img src="logo.png" className="" alt="" />
+            </div>
 
-          <p className=" oder-1 md:order-2 font-semibold lg:text-2xl">
-            Community Health
-          </p>
+            <p className=" oder-1 md:order-2 font-semibold lg:text-2xl">
+              Community Health
+            </p>
+          </NavLink>
         </div>
       </div>
 
       <div className="navbar-center hidden lg:flex lg:flex-1 lg:justify-end ">
         <MenuItems classes={"menu menu-horizontal px-1"} />
       </div>
-      {/* <div className="navbar-end">
-        <a className="btn">Button</a>
-      </div> */}
     </div>
   );
 };

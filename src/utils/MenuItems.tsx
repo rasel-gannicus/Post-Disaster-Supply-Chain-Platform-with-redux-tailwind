@@ -1,8 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 export const MenuItems = ({ classes }) => {
   return (
     <ul className={classes}>
       <li>
-        <a>All Supplies</a>
+        <NavLink to="/supplies">
+          <a>All Supplies</a>
+        </NavLink>
       </li>
       <li>
         <details>

@@ -27,14 +27,14 @@ const SupplyCard = (data : supplyData) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{data.data.title || 'Title'}</h2>
-        <div className=" flex justify-start gap-2">
+        <h2 className="card-title">{title || 'Title'}</h2>
+        <div className=" flex justify-start gap-2 text-sm md:text-base">
             <p>Category : </p>
             <p>{category}</p>
         </div>
         <div className=" flex justify-start gap-2">
             <p>Amount : </p>
-            <p>25 pcs</p>
+            <p><span className="text-teal-600 font-semibold">{amount}</span> pcs</p>
         </div>
         <div className="card-actions justify-end">
           <button onClick={goSupplyDetailsPage} className="btn mt-7">View Details</button>

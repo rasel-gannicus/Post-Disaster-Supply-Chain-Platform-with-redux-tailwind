@@ -17,14 +17,15 @@ const SupplySection = () => {
           content = <p>No Supply Found</p>
       }
       if (!isLoading && !isError && data.length > 0) {
-          console.log(data);
-          content = data.map((index) => <SupplyCard key={index._id} data={index} />)
+          // console.log(data);
+          const limitData = data.slice(0,6)
+          content = limitData.map((index) => <SupplyCard key={index._id} data={index} />)
       }
   return (
     <div>
         <h2 className="text-4xl font-bold text-center mt-20">View Our Supplies</h2>
         <hr className="border-2 w-3/4 mx-auto my-5" />
-      <div className="py-5 grid md:grid-cols-3 gap-6 px-5 ">
+      <div className="py-5 grid md:grid-cols-3 gap-6 px-1">
         {content}
       </div>
     </div>

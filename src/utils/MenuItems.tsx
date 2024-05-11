@@ -4,7 +4,7 @@ export const MenuItems = ({ classes }) => {
   return (
     <ul className={classes}>
       <li>
-        <NavLink to="/supplies">
+        <NavLink to="/supplies" className='bg-gray-200 font-medium'>
           <a>All Supplies</a>
         </NavLink>
       </li>

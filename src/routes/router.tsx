@@ -4,6 +4,7 @@ import App from "../App";
 import AllSupllies from "../pages/All Supplies/AllSupllies";
 import SingleSupplyDetails from "../pages/Single Supply Details/SingleSupplyDetails";
 import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 
 
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path : 'login',
                 element : <Login />
+            },
+            {
+                path : 'register',
+                element : <Register />
             },
         ]
     }

@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import DashBoard from "../pages/Dashboard/DashBoard";
 import AllSuppliesDashboard from "../pages/Dashboard/Dashboard All Supplies/AllSuppliesDashboard";
+import CreateSupply from "../pages/Dashboard/Create New Supply/CreateSupply";
 
 export const router = createBrowserRouter([
   {
@@ -49,8 +50,8 @@ export const router = createBrowserRouter([
             element: <AllSuppliesDashboard />,
           },
           {
-            path: "",
-            element: <Register />,
+            path: "create-supply",
+            element: <CreateSupply />,
           },
     ]
   },

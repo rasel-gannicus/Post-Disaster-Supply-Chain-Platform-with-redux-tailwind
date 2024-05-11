@@ -1,7 +1,56 @@
+import { useNavigate } from "react-router-dom";
+import { useGetAllSuppliesQuery } from "../../../Redux/app/supply slice/supplyApi";
+
 const AllSuppliesDashboard = () => {
+    const navigate = useNavigate();
+  // --- Fetching data from server using Redux toolkit Query
+  const { data, isLoading, isError, error } = useGetAllSuppliesQuery();
+
+  let content = null;
+  if (isLoading && !isError) {
+    content = <h1>Loading...</h1>;
+  }
+  if (!isLoading && isError) {
+    content = <p>{error?.error}</p>;
+  }
+  if (!isLoading && !isError && data.length === 0) {
+    content = <p>No Supply Found</p>;
+  }
+  if (!isLoading && !isError && data.length > 0) {
+    content = data.map((item) => (
+      <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+        <th
+          scope="row"
+          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          {item.title}
+        </th>
+        <td className="px-6 py-4">{item.category}</td>
+        <td className="px-6 py-4">{item.amount}</td>
+        <td className="px-6 py-4 flex flex-col gap-1 md:flex md:flex-row">
+          <button className="btn btn-xs btn-warning font-normal">Edit</button>
+          <button className="btn btn-xs btn-neutral text-white font-normal ms-1">
+            Delete
+          </button>
+        </td>
+      </tr>
+    ));
+  }
+
   return (
     <div>
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <h2 className="mt-10 text-center text-4xl font-semibold">
+        All Supply List
+      </h2>
+      <hr className="border-2 w-3/4 mx-auto mt-3 mb-8" />
+
+      <div className="text-center">
+        <button onClick={()=>navigate('/dashboard/create-supply')} className="btn btn-lg  mb-10 mx-auto text-center hover:btn-neutral">
+          Add New Supply
+        </button>
+      </div>
+
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mb-40">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -19,33 +68,7 @@ const AllSuppliesDashboard = () => {
               </th>
             </tr>
           </thead>
-          <tbody>
-            
-            
-            <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Magic Mouse 2
-              </th>
-              <td className="px-6 py-4">Accessories</td>
-              <td className="px-6 py-4">$99</td>
-              <td className="px-6 py-4">
-                {/* <a
-                  href="#"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Edit
-                </a> */}
-                <button className="btn btn-xs btn-warning font-normal">Edit</button>
-                <button className="btn btn-xs btn-neutral text-white font-normal ms-1">Delete</button>
-              </td>
-            </tr>
-            
-            
-            
-          </tbody>
+          <tbody>{content}</tbody>
         </table>
       </div>
     </div>

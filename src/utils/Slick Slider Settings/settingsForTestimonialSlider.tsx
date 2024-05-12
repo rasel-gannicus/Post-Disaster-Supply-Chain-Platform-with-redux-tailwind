@@ -6,7 +6,7 @@ export const settingsForTestimonialSliders = {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    centerMode : true,
+    // centerMode : true,
     arrows : true,
     responsive: [
       {

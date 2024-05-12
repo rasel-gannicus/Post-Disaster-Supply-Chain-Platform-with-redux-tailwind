@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../../Redux/hooks";
 import {
   clickEdit,
   getDeletedId,
+  setEditId,
 } from "../../../Redux/app/supply slice/supplySlice";
 
 const AllSuppliesDashboard = () => {
@@ -11,14 +12,16 @@ const AllSuppliesDashboard = () => {
 
   // --- enabling deleting functions
   const dispatch = useAppDispatch();
+
   const handleDelete = (id: string) => {
     dispatch(clickEdit(false));
     dispatch(getDeletedId(id));
   };
 
   // --- enabling edit functions
-  const enableEdit = () => {
+  const enableEdit = (id) => {
     dispatch(clickEdit(true));
+    dispatch(setEditId(id)) ;
   };
 
   // --- Fetching data from server using Redux toolkit Query
@@ -47,7 +50,7 @@ const AllSuppliesDashboard = () => {
         <td className="px-6 py-4">{item.amount}</td>
         <td className="px-6 py-4 flex flex-col gap-1 md:flex md:flex-row">
           <label
-            onClick={enableEdit}
+            onClick={() => enableEdit(item._id)}
             htmlFor="my_modal_7"
             className="btn btn-xs btn-warning font-normal"
           >

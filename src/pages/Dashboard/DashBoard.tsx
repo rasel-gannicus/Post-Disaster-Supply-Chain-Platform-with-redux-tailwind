@@ -16,8 +16,6 @@ const DashBoard = () => {
     console.log("Deleted !");
   }
 
-  // --- edit supply functionality
-  console.log(deletedId);
 
   return (
     <div>

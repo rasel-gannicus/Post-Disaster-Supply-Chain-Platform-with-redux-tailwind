@@ -7,7 +7,6 @@ const SingleSupplyDetails = () => {
 
   // --- Fetching data from server using Redux toolkit Query
   const { data, isLoading, isError, error } = useGetSingleSupplyQuery(id);
-  console.log(data);
 
   return (
     <div className="flex flex-col min-h-screen justify-center items-center max-w-[1200px] mx-auto mt-32 mb-20 shadow-2xl px-2 md:px-5 rounded-2xl py-5">

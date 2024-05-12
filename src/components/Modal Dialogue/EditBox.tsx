@@ -1,11 +1,38 @@
-import { useAddNewSupplyMutation } from "../../Redux/app/supply slice/supplyApi";
+import {
+  useAddNewSupplyMutation,
+  useEditSupplyMutation,
+  useGetSingleSupplyQuery,
+} from "../../Redux/app/supply slice/supplyApi";
+import { useAppSelector } from "../../Redux/hooks";
 
 const EditBox = () => {
+  const getEditSupplyId = useAppSelector(
+    (state) => state.supplies.editSupplyId
+  );
 
-    const [addSupplyPost, {data, isSuccess, isLoading}] = useAddNewSupplyMutation() ;
-    const handleSubmit = (e) => {
-        e.preventDefault() ;
-    }
+  // --- fetching single supply data using redux
+  const { data, isLoading, isError, error } =
+    useGetSingleSupplyQuery(getEditSupplyId);
+
+  const [editSupplyPost, { data : editedData, isSuccess : isEditSuccess , isLoading : editLoading }] =
+    useEditSupplyMutation();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const ongoingEditData = {
+        title: e.target.title.value,
+        img: e.target.img.value,
+        category: e.target.category.value,
+        amount: e.target.amount.value,
+        description: e.target.description.value,
+      }
+
+    editSupplyPost({id : getEditSupplyId, data : ongoingEditData });
+  };
+  if(isEditSuccess){
+    console.log(editedData);
+  }
   return (
     <section className="">
       <div className="flex flex-col items-center justify-center px-6 mx-auto md:h-screen lg:py-0">
@@ -23,6 +50,7 @@ const EditBox = () => {
                   Supply Title
                 </label>
                 <input
+                  defaultValue={data?.title}
                   type="title"
                   name="title"
                   //   onBlur={(e) => setTitle(e.target.value)}
@@ -40,6 +68,7 @@ const EditBox = () => {
                   Image Url
                 </label>
                 <input
+                  defaultValue={data?.img}
                   type="img"
                   name="img"
                   id="img"
@@ -56,6 +85,7 @@ const EditBox = () => {
                   Category
                 </label>
                 <input
+                  defaultValue={data?.category}
                   type="category"
                   name="category"
                   id="category"
@@ -72,6 +102,7 @@ const EditBox = () => {
                   Amount
                 </label>
                 <input
+                  defaultValue={data?.amount}
                   type="number"
                   name="amount"
                   id="amount"
@@ -88,6 +119,7 @@ const EditBox = () => {
                   Description
                 </label>
                 <textarea
+                  defaultValue={data?.description}
                   name="description"
                   id="description"
                   placeholder="Write a short description here"
@@ -96,7 +128,7 @@ const EditBox = () => {
                 />
               </div>
               <button
-                disabled={isSuccess}
+                // disabled={editedData?.modifiedCount === 1}
                 type="submit"
                 className="btn w-full text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-primary-800 "
               >

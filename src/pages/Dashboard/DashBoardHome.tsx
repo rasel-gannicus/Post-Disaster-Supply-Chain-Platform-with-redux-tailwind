@@ -2,6 +2,7 @@ import React from "react";
 import { PieChart } from "react-minimal-pie-chart";
 import { useGetAllSuppliesQuery } from "../../Redux/app/supply slice/supplyApi";
 import Chart from "./Pie Chart/Chart";
+import PieChartComponent from "./Pie Chart/PieChartComponent";
 
 const supplies = [
   {
@@ -85,9 +86,9 @@ const DashBoardHome = () => {
     content = <p>No Supply Found</p>;
   }
   if (!isLoading && !isError && data.length > 0) {
-    content = <Chart data={data} />
+    content = <PieChartComponent data={data} />
   }
-  return <div>{content}</div>;
+  return <div className="md:h-screen flex justify-center items-center">{content}</div>;
 };
 
 export default DashBoardHome;

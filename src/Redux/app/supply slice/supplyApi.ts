@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const supplyApi = createApi({
     reducerPath : 'supplyApi',
     baseQuery : fetchBaseQuery({
-        baseUrl : 'http://localhost:5001'
+        baseUrl : 'https://server-for-assignment-7.vercel.app/'
     }),
     tagTypes : [ 'supplies'] ,
     endpoints : (builder) => ({

@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 export const MenuItems = ({ classes }) => {
   return (
     <ul className={classes}>
-      <li>
+      <li className="md:me-5">
         <NavLink to="/supplies" className='bg-gray-200 font-medium'>
-          <a>All Supplies</a>
+          <a className="">All Supplies</a>
         </NavLink>
       </li>
       <li>
@@ -21,9 +21,10 @@ export const MenuItems = ({ classes }) => {
             </div>
           </summary>
           <ul className="p-2">
-            <li className="border-b-2">
+            <li className=" my-2">
               <NavLink to='/dashboard'>Dashboard</NavLink>
             </li>
+            <hr className="mx-auto" />
             <li>
               <NavLink to='/login'>Login</NavLink>
             </li>

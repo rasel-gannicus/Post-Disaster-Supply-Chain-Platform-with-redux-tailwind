@@ -21,7 +21,7 @@ const PieChartComponent = (data) => {
   }));
 
   return (
-    <div className="w-full shadow-2xl rounded-xl md:w-2/3 mx-auto  border-4 flex flex-col justify-center items-center overflow-scroll">
+    <div className="w-full shadow-2xl rounded-xl lg:w-2/3 mx-auto  border-4 flex flex-col justify-center items-center overflow-scroll lg:overflow-auto">
         <h2 className="text-2xl font-semibold mt-10 px-5 text-center">Total Items Stats in Chart Format</h2>
         <hr className="border-2 w-3/4 mx-auto mt-5" />
       <PieChart width={600} height={600}>

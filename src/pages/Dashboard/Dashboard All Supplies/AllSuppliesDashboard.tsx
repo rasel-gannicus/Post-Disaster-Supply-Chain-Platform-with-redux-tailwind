@@ -15,14 +15,14 @@ const AllSuppliesDashboard = () => {
 
 
   // --- Fetching data from server using Redux toolkit Query
-  const { data, isLoading, isError, error } = useGetAllSuppliesQuery();
+  const { data, isLoading, isError, error } = useGetAllSuppliesQuery(undefined);
 
   let content = null;
   if (isLoading && !isError) {
     content = <h1>Loading...</h1>;
   }
   if (!isLoading && isError) {
-    content = <p>{error?.error}</p>;
+    content = <p>Error happened</p>;
   }
   if (!isLoading && !isError && data.length === 0) {
     content = <p>No Supply Found</p>;

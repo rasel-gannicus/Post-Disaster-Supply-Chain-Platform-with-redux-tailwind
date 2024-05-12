@@ -9,7 +9,7 @@ type supplyData = {
   description: string;
 };
 
-const SupplyCard = (data: supplyData) => {
+const SupplyCard = (data : any) => {
   const location = useLocation();
   // Check if the URL pathname contains 'dashboard', if so the 'edit' button will show then
   const isDashboard = location.pathname.includes("dashboard");

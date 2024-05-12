@@ -10,7 +10,7 @@ const CreateSupply = () => {
             title : e.target.title.value,
             img : e.target.img.value,
             category : e.target.category.value,
-            amount : e.target.amount.value,
+            amount : parseInt(e.target.amount.value),
             description : e.target.description.value
         })
     }

@@ -42,6 +42,12 @@ export const supplyApi = createApi({
       }),
       invalidatesTags: ["supplies"],
     }),
+
+    getTestimonials: builder.query({
+      query: () => "/testimonials",
+    }),
+
+
   }),
 });
 
@@ -50,5 +56,6 @@ export const {
   useGetSingleSupplyQuery,
   useAddNewSupplyMutation,
   useDeleteSupplyMutation,
-  useEditSupplyMutation
+  useEditSupplyMutation,
+  useGetTestimonialsQuery
 } = supplyApi;

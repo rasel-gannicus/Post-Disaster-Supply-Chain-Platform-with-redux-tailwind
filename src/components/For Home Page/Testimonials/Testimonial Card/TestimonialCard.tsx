@@ -1,22 +1,22 @@
-const TestimonialCard = () => {
+const TestimonialCard = (data) => {
+  const datas = data.data ;
   return (
     <div className="mx-5 card glass bg-base-100  py-5 my-5">
       <figure className="w-40 h-40 mx-auto rounded-full overflow-hidden border-2">
         <img
-          src="https://i.ibb.co/JsTcbXF/hacker.png"
+          src={datas.profile_picture}
           alt="Shoes"
           className="w-full"
         />
       </figure>
       <div className="card-body">
         <div className=" text-center mb-3">
-          life One day however a small line of blind text by the name of Lorem
-          Ipsum from far
+          {datas.testimonial}
         </div>
         <hr />
         <div className="text-center">
-          <h2 className="font-semibold text-2xl text-teal-600">Mr. Jonathan</h2>
-          <p className="text-gray-400">Founder, New Jersey Security</p>
+          <h2 className="font-semibold text-2xl text-teal-600">{data.name}</h2>
+          <p className="text-gray-400"><span className="font-semibold">{datas.position}</span>, <span className="text-teal-700 font-semibold">{datas.company}</span> </p>
         </div>
       </div>
     </div>

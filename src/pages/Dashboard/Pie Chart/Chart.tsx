@@ -12,12 +12,12 @@ const Chart = (data) => {
       <PieChart width={400} height={400}>
           <Pie
             dataKey='amount'
-            startAngle={180}
-            endAngle={0}
+            startAngle={0}
+            endAngle={360}
             data={convertedData}
             cx="50%"
             cy="50%"
-            outerRadius={80}
+            outerRadius={120}
             fill="#8884d8"
             label
           />

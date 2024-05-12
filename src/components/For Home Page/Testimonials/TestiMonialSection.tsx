@@ -10,7 +10,7 @@ const TestiMonialSection = () => {
         Testimonials
       </h2>
       <hr className="border-1 w-3/4 mx-auto my-5" />
-      <div className="testimonial-slider shadow-lg rounded-lg">
+      <div className="testimonial-slider shadow-lg rounded-lg w-[95%] mx-auto">
         <Slider {...settingsForTestimonialSliders}>
           <TestimonialCard />
           <TestimonialCard />

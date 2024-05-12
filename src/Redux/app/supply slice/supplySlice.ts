@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    deleteSupplyId : ''
+    deleteSupplyId : '',
+    editButtonClicked : false
 }
 
 
@@ -11,10 +12,18 @@ export const supplySlice = createSlice({
     reducers : {
         getDeletedId : (state, action) =>{
             state.deleteSupplyId = action.payload ;
+        },
+
+        clickEdit : (state, action) => {
+            if(action.payload === true){
+                state.editButtonClicked = true ;
+            }else{
+                state.editButtonClicked = false ; 
+            }
         }
     }
 })
 
 
-export const {getDeletedId} = supplySlice.actions ; 
+export const {getDeletedId, clickEdit} = supplySlice.actions ; 
 export default supplySlice.reducer ;

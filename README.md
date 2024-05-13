@@ -37,3 +37,59 @@ Explore the live site [here](https://assignment-7-level-2.netlify.app/).
 ### Repository
 
 Access the GitHub repository for the server [here](https://github.com/shafik720/Server-for-Advanced-Frontend-Assignment---7-Health-Medical-Supply-Chain).
+
+
+
+## Setting Up Locally
+
+### Frontend
+
+To set up the frontend locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone <frontend-repo-url>
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd <frontend-project-directory>
+    ```
+
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the development server:
+    ```bash
+    npm start
+    ```
+
+5. Access the application at `http://localhost:3000` in your web browser.
+
+### Backend
+
+To set up the backend locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone <backend-repo-url>
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd <backend-project-directory>
+    ```
+
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the server:
+    ```bash
+    npm start
+    ```
+
+5. The backend server will start running at the specified port.

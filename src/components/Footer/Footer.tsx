@@ -2,50 +2,61 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer-section text-white ">
-      <div className="lg:max-w-[1200px] max-w-full  md:mx-auto mx-5 px-3 py-20 ">
-        <div className="">
-          <div className="flex gap-1 justify-center items-center bg-white text-black max-w-72 py-4 mx-auto rounded-lg mb-10">
-            <div className="border-[3px] w-10 h-10 border-slate-400 rounded-full p-1 mr-2 overflow-hidden">
-              <img src="logo.png" className="" alt="" />
-            </div>
-
-            <p className="font-semibold text-2xl ">Community Health</p>
+    <div className="bg-neutral">
+      <footer className="footer p-10 text-base-content  text-neutral-content lg:max-w-[1200px]  md:mx-auto">
+        <nav>
+          <h6 className="footer-title">Services</h6>
+          <a className="link link-hover">Locations</a>
+          <a className="link link-hover">Testimonials</a>
+          <a className="link link-hover">Donations</a>
+          <a className="link link-hover">Our Patron</a>
+        </nav>
+        <nav>
+          <h6 className="footer-title">Company</h6>
+          <a className="link link-hover">About us</a>
+          <a className="link link-hover">Contact</a>
+          <a className="link link-hover">Donate us</a>
+          <a className="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 className="footer-title">Social</h6>
+          <div className="grid grid-flow-col gap-4">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-current"
+              >
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-current"
+              >
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-current"
+              >
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+              </svg>
+            </a>
           </div>
-        </div>
-        <div className=" flex justify-center items-center gap-3 my-5">
-          <span>
-            <img className="w-10" src="placeholder.png" alt="" />
-          </span>
-          <p className="text-1xl ">Uttara, Dhaka</p>
-        </div>
-        <div className=" flex justify-center items-center gap-3 my-5">
-          <span>
-            <img className="w-10" src="old-phone.png" alt="" />
-          </span>
-          <p className="text-1xl">+8801716707031</p>
-        </div>
-        <div className=" flex justify-center items-center gap-3 my-5">
-          <span>
-            <img className="w-10" src="mail.png" alt="" />
-          </span>
-          <p className="text-1xl">shafikrasel5@gmail.com</p>
-        </div>
-        <div className="flex justify-center items-center gap-4">
-          <img
-            className="w-8"
-            src="https://i.ibb.co/tB9HhgW/facebook.png"
-            alt=""
-          />
-          {/* <img className="w-8" src="https://i.ibb.co/0sh2Gtn/google-1.png" alt="" /> */}
-          <img
-            className="w-8"
-            src="https://i.ibb.co/MGhDQ6K/social.png"
-            alt=""
-          />
-          <img className="w-8" src="twitter.png" alt="" />
-        </div>
-      </div>
+        </nav>
+      </footer>
     </div>
   );
 };

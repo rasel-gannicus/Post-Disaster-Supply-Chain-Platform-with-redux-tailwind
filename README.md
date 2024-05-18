@@ -40,3 +40,60 @@ Access the GitHub repository for the server [here](https://github.com/shafik720/
 
 
 
+
+## Setting Up Locally
+
+### Frontend
+
+To set up the frontend locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/shafik720/Level-2-Advanced-Frontend-Assignment---7-Post-Disaster-Supply-Chain-Platform.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd Level-2-Advanced-Frontend-Assignment---7-Post-Disaster-Supply-Chain-Platform
+    ```
+
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the development server:
+    ```bash
+    npm run dev
+    ```
+
+5. Access the application at `http://localhost:3000` in your web browser.
+
+
+### Backend
+
+To set up the backend locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/shafik720/Server-for-Advanced-Frontend-Assignment---7-Health-Medical-Supply-Chain.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd Server-for-Advanced-Frontend-Assignment---7-Health-Medical-Supply-Chain
+    ```
+
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Configure the .env file as your personal settings
+   
+5. Start the server:
+    ```bash
+    node index.js
+    ```
+
+6. The backend server will start running at the specified `http://localhost:5001`

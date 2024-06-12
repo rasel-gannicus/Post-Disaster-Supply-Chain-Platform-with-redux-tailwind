@@ -1,8 +1,8 @@
 
 
-# Website For Post-Disaster Community Health and Medical Supply Chain Platform
+# Aid Connect
 
-Welcome to the Post-Disaster Community Health and Medical Supply Chain Platform! This project is aimed at facilitating post-disaster recovery efforts by providing a comprehensive platform for managing health and medical supplies within affected communities. Built using modern technologies, this platform ensures efficiency and accessibility in times of crisis.
+Welcome to the Aid Connect Platform! This project is aimed at facilitating post-disaster recovery efforts by providing a comprehensive platform for managing health and medical supplies within affected communities. Built using modern technologies, this platform ensures efficiency and accessibility in times of crisis.
 
 ## Technologies Used
 
